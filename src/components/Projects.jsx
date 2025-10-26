@@ -56,7 +56,7 @@ function Projects() {
               onClick={handleViewDetails}
               className="text-blue-500 hover:text-blue-700 font-medium text-sm"
             >
-              Lihat Detail →
+              Read More...
             </button>
           </div>
         </div>

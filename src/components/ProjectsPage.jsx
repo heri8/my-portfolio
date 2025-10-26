@@ -25,13 +25,11 @@ function ProjectsPage() {
       <div className="container mx-auto px-4 py-12">
         {/* Header */}
         <div className="text-center mb-12">
-          <h1 className="text-4xl font-bold text-gray-800 mb-4">
-            Portofolio Proyek
-          </h1>
+          <h1 className="text-4xl font-bold text-gray-800 mb-4">Projects</h1>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            Jelajahi berbagai proyek yang telah saya kerjakan, dari pengembangan
-            web hingga aplikasi mobile. Setiap proyek memiliki cerita dan
-            tantangan uniknya sendiri.
+            Dive into my diverse portfolio, showcasing projects from web
+            development to mobile applications. Each creation tells a unique
+            story and presented its own set of challenges.
           </p>
         </div>
 
@@ -107,7 +105,7 @@ function ProjectsPage() {
                     {project.duration}
                   </span>
                   <button className="text-blue-500 hover:text-blue-700 font-medium text-sm">
-                    Lihat Detail →
+                    Show More...
                   </button>
                 </div>
               </div>
@@ -134,10 +132,10 @@ function ProjectsPage() {
               <i className="fas fa-folder-open"></i>
             </div>
             <h3 className="text-xl font-semibold text-gray-600 mb-2">
-              Tidak ada proyek
+              Project not found
             </h3>
             <p className="text-gray-500">
-              Tidak ada proyek yang ditemukan untuk kategori ini.
+              Project not found in this category
             </p>
           </div>
         )}

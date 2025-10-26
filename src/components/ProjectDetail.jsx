@@ -54,20 +54,24 @@ function ProjectDetail() {
               </p>
             </div>
             <div className="flex gap-4">
-              <a
-                href={project.demoLink}
-                className="bg-blue-500 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-600 transition duration-300 shadow-lg"
-              >
-                <i className="fas fa-external-link-alt mr-2"></i>
-                Live Demo
-              </a>
-              <a
-                href={project.githubLink}
-                className="bg-gray-800 text-white px-6 py-3 rounded-lg font-semibold hover:bg-gray-900 transition duration-300 shadow-lg"
-              >
-                <i className="fab fa-github mr-2"></i>
-                Source Code
-              </a>
+              {project.demoLink !== "#" && (
+                <a
+                  href={project.demoLink}
+                  className="bg-blue-500 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-600 transition duration-300 shadow-lg"
+                >
+                  <i className="fas fa-external-link-alt mr-2"></i>
+                  Live Demo
+                </a>
+              )}
+              {project.githubLink !== "#" && (
+                <a
+                  href={project.githubLink}
+                  className="bg-gray-800 text-white px-6 py-3 rounded-lg font-semibold hover:bg-gray-900 transition duration-300 shadow-lg"
+                >
+                  <i className="fab fa-github mr-2"></i>
+                  Source Code
+                </a>
+              )}
             </div>
           </div>
         </div>
@@ -167,9 +171,7 @@ function ProjectDetail() {
                     </div>
                     <div className="flex justify-between">
                       <span className="text-gray-600">Status:</span>
-                      <span className="font-medium text-green-500">
-                        Done
-                      </span>
+                      <span className="font-medium text-green-500">Done</span>
                     </div>
                   </div>
                 </div>
@@ -177,7 +179,7 @@ function ProjectDetail() {
                 {/* Technologies */}
                 <div>
                   <h4 className="text-lg font-semibold text-gray-800 mb-4">
-                    Technologies
+                    Tech Stacks
                   </h4>
                   <div className="flex flex-wrap gap-2">
                     {project.technologies.map((tech, index) => (
@@ -207,41 +209,29 @@ function ProjectDetail() {
                           {feature}
                         </li>
                       ))}
-                    {!project.features && (
-                      <>
-                        <li className="flex items-center text-gray-600">
-                          <i className="fas fa-check-circle text-green-500 mr-3"></i>
-                          Responsive Design
-                        </li>
-                        <li className="flex items-center text-gray-600">
-                          <i className="fas fa-check-circle text-green-500 mr-3"></i>
-                          Modern UI/UX
-                        </li>
-                        <li className="flex items-center text-gray-600">
-                          <i className="fas fa-check-circle text-green-500 mr-3"></i>
-                          Optimized Performance
-                        </li>
-                      </>
-                    )}
                   </ul>
                 </div>
 
                 {/* CTA Buttons */}
                 <div className="space-y-3">
-                  <a
-                    href={project.demoLink}
-                    className="w-full bg-blue-500 text-white py-3 rounded-lg font-semibold hover:bg-blue-600 transition duration-300 text-center block"
-                  >
-                    <i className="fas fa-external-link-alt mr-2"></i>
-                    Live Demo
-                  </a>
-                  <a
-                    href={project.githubLink}
-                    className="w-full bg-gray-800 text-white py-3 rounded-lg font-semibold hover:bg-gray-900 transition duration-300 text-center block"
-                  >
-                    <i className="fab fa-github mr-2"></i>
-                    Source Code
-                  </a>
+                  {project.demoLink !== "#" && (
+                    <a
+                      href={project.demoLink}
+                      className="w-full bg-blue-500 text-white py-3 rounded-lg font-semibold hover:bg-blue-600 transition duration-300 text-center block"
+                    >
+                      <i className="fas fa-external-link-alt mr-2"></i>
+                      Live Demo
+                    </a>
+                  )}
+                  {project.githubLink !== "#" && (
+                    <a
+                      href={project.githubLink}
+                      className="w-full bg-gray-800 text-white py-3 rounded-lg font-semibold hover:bg-gray-900 transition duration-300 text-center block"
+                    >
+                      <i className="fab fa-github mr-2"></i>
+                      Source Code
+                    </a>
+                  )}
                 </div>
               </div>
             </div>

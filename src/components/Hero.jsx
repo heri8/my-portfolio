@@ -1,5 +1,6 @@
 import React from "react";
 import { personalInfo } from "../data/dummyData";
+import FotoProfil from "../../public/img/foto_profil.jpg";
 
 const Hero = () => {
   const scrollToSection = (sectionId) => {
@@ -49,7 +50,7 @@ const Hero = () => {
             <div className="relative">
               <div className="w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-white shadow-2xl">
                 <img
-                  src="img/foto_profil.jpg"
+                  src={FotoProfil}
                   alt="Profile"
                   className="w-full h-full object-cover transform"
                 />
