@@ -1,9 +1,12 @@
 {
   "name": "portfolio",
   "private": true,
+  "homepage": "https://heri8.github.io/my-portfolio",
   "version": "0.0.0",
   "type": "module",
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist",
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
